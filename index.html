@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agência Criativa Web</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+  <header>
+    <h1 class="logo">Agência Criativa Web</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="home" class="banner fade-in">
+      <picture>
+        <source srcset="img/banner-large.jpg" media="(min-width: 768px)">
+        <source srcset="img/banner-small.jpg" media="(max-width: 767px)">
+        <img src="img/banner-large.jpg" alt="Banner da Agência" class="banner-img" />
+      </picture>
+      <h2>Transformamos ideias em <span class="destaque">experiências digitais</span></h2>
+      <p>Criação de sites, branding e design moderno sob medida.</p>
+      <a href="#contato" class="cta-button">Solicite um orçamento</a>
+    </section>
+
+    <section id="sobre" class="fade-in">
+      <h2>Sobre Nós</h2>
+      <p>Combinamos estratégia, design e tecnologia para criar soluções digitais que geram resultados. Inovação e criatividade são nossa base.</p>
+    </section>
+
+    <section id="servicos" class="fade-in">
+      <h2>Serviços</h2>
+      <ul class="grid-servicos">
+        <li><article>Design Gráfico</article></li>
+        <li><article>Desenvolvimento Web</article></li>
+        <li><article>Identidade Visual</article></li>
+        <li><article>UI/UX Design</article></li>
+      </ul>
+    </section>
+
+    <section id="depoimentos" class="fade-in">
+      <h2>Depoimentos</h2>
+      <article>
+        <blockquote>“Equipe super profissional, resultado excelente!”</blockquote>
+        <p>– Ana Martins</p>
+      </article>
+      <article>
+        <blockquote>“Nossa marca ganhou vida com o trabalho da Agência Criativa Web.”</blockquote>
+        <p>– João Silva</p>
+      </article>
+    </section>
+
+    <section id="contato" class="fade-in">
+      <h2>Entre em Contato</h2>
+      <form>
+        <input type="text" placeholder="Seu nome" required />
+        <input type="email" placeholder="Seu e-mail" required />
+        <textarea placeholder="Sua mensagem" required></textarea>
+        <button type="submit" class="cta-button">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Agência Criativa Web. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
