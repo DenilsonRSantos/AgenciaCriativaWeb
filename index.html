@@ -8,15 +8,15 @@
 </head>
 <body>
 
-  <header>
+  <header class="header">
     <h1 class="logo">Agência Criativa Web</h1>
     <nav>
       <ul class="menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="#home" class="menu__link">Home</a></li>
+        <li><a href="#sobre" class="menu__link">Sobre</a></li>
+        <li><a href="#servicos" class="menu__link">Serviços</a></li>
+        <li><a href="#depoimentos" class="menu__link">Depoimentos</a></li>
+        <li><a href="#contato" class="menu__link">Contato</a></li>
       </ul>
     </nav>
   </header>
@@ -27,53 +27,53 @@
       <picture>
         <source srcset="img/banner-large.jpg" media="(min-width: 768px)">
         <source srcset="img/banner-small.jpg" media="(max-width: 767px)">
-        <img src="img/banner-large.jpg" alt="Banner da Agência" class="banner-img" />
+        <img src="img/banner-large.jpg" alt="Banner da Agência" class="banner__imagem" />
       </picture>
-      <h2>Transformamos ideias em <span class="destaque">experiências digitais</span></h2>
+      <h2 class="banner__titulo">Transformamos ideias em <span class="banner__destaque">experiências digitais</span></h2>
       <p>Criação de sites, branding e design moderno sob medida.</p>
-      <a href="#contato" class="cta-button">Solicite um orçamento</a>
+      <a href="#contato" class="botao--cta">Solicite um orçamento</a>
     </section>
 
-    <section id="sobre" class="fade-in">
-      <h2>Sobre Nós</h2>
+    <section id="sobre" class="secao fade-in">
+      <h2 class="secao__titulo">Sobre Nós</h2>
       <p>Combinamos estratégia, design e tecnologia para criar soluções digitais que geram resultados. Inovação e criatividade são nossa base.</p>
     </section>
 
-    <section id="servicos" class="fade-in">
-      <h2>Serviços</h2>
-      <ul class="grid-servicos">
-        <li><article>Design Gráfico</article></li>
-        <li><article>Desenvolvimento Web</article></li>
-        <li><article>Identidade Visual</article></li>
-        <li><article>UI/UX Design</article></li>
+    <section id="servicos" class="secao fade-in">
+      <h2 class="secao__titulo">Serviços</h2>
+      <ul class="servicos__grid">
+        <li class="servicos__item"><article>Design Gráfico</article></li>
+        <li class="servicos__item"><article>Desenvolvimento Web</article></li>
+        <li class="servicos__item"><article>Identidade Visual</article></li>
+        <li class="servicos__item"><article>UI/UX Design</article></li>
       </ul>
     </section>
 
-    <section id="depoimentos" class="fade-in">
-      <h2>Depoimentos</h2>
+    <section id="depoimentos" class="secao fade-in">
+      <h2 class="secao__titulo">Depoimentos</h2>
       <article>
-        <blockquote>“Equipe super profissional, resultado excelente!”</blockquote>
+        <blockquote class="depoimento">“Equipe super profissional, resultado excelente!”</blockquote>
         <p>– Ana Martins</p>
       </article>
       <article>
-        <blockquote>“Nossa marca ganhou vida com o trabalho da Agência Criativa Web.”</blockquote>
+        <blockquote class="depoimento">“Nossa marca ganhou vida com o trabalho da Agência Criativa Web.”</blockquote>
         <p>– João Silva</p>
       </article>
     </section>
 
-    <section id="contato" class="fade-in">
-      <h2>Entre em Contato</h2>
-      <form>
-        <input type="text" placeholder="Seu nome" required />
-        <input type="email" placeholder="Seu e-mail" required />
-        <textarea placeholder="Sua mensagem" required></textarea>
-        <button type="submit" class="cta-button">Enviar</button>
+    <section id="contato" class="secao fade-in">
+      <h2 class="secao__titulo">Entre em Contato</h2>
+      <form class="formulario">
+        <input type="text" class="formulario__input" placeholder="Seu nome" required />
+        <input type="email" class="formulario__input" placeholder="Seu e-mail" required />
+        <textarea class="formulario__textarea" placeholder="Sua mensagem" required></textarea>
+        <button type="submit" class="formulario__botao botao--cta">Enviar</button>
       </form>
     </section>
 
   </main>
 
-  <footer>
+  <footer class="footer">
     <p>&copy; 2025 Agência Criativa Web. Todos os direitos reservados.</p>
   </footer>
 

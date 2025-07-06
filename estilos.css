@@ -1,4 +1,4 @@
-/* Reset */
+/* ========== Base ========== */
 * {
   margin: 0;
   padding: 0;
@@ -12,8 +12,8 @@ body {
   color: #222;
 }
 
-/* Cabeçalho */
-header {
+/* ========== Layout ========== */
+.header {
   background-color: #1e1e2f;
   color: #fff;
   padding: 1rem 2rem;
@@ -27,6 +27,7 @@ header {
   font-size: 1.8rem;
 }
 
+/* ========== Navegação ========== */
 .menu {
   list-style: none;
   display: flex;
@@ -34,12 +35,12 @@ header {
   flex-wrap: wrap;
 }
 
-.menu a {
+.menu__link {
   color: #fff;
   text-decoration: none;
 }
 
-/* Banner */
+/* ========== Banner ========== */
 .banner {
   text-align: center;
   padding: 4rem 2rem;
@@ -48,7 +49,7 @@ header {
   position: relative;
 }
 
-.banner-img {
+.banner__imagem {
   width: 100%;
   height: auto;
   max-height: 400px;
@@ -57,12 +58,16 @@ header {
   margin-bottom: 2rem;
 }
 
-.destaque {
+.banner__titulo {
+  font-size: 2rem;
+}
+
+.banner__destaque {
   font-weight: bold;
   color: #ffd700;
 }
 
-.cta-button {
+.botao--cta {
   margin-top: 1.5rem;
   display: inline-block;
   background: #ffd700;
@@ -74,46 +79,46 @@ header {
   transition: transform 0.3s ease;
 }
 
-.cta-button:hover {
+.botao--cta:hover {
   transform: scale(1.05);
 }
 
-/* Seções */
-section {
+/* ========== Seções Gerais ========== */
+.secao {
   padding: 4rem 2rem;
 }
 
-section h2 {
+.secao__titulo {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-/* Serviços com Grid */
-.grid-servicos {
+/* ========== Serviços (Grid) ========== */
+.servicos__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
   list-style: none;
 }
 
-.grid-servicos article {
+.servicos__item {
   background-color: white;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-/* Depoimentos */
-blockquote {
+/* ========== Depoimentos ========== */
+.depoimento {
   font-style: italic;
   border-left: 4px solid #3b82f6;
   padding-left: 1rem;
   margin-bottom: 1rem;
 }
 
-/* Formulário */
-form {
+/* ========== Formulário ========== */
+.formulario {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -121,7 +126,8 @@ form {
   margin-top: 1rem;
 }
 
-input, textarea {
+.formulario__input,
+.formulario__textarea {
   padding: 0.75rem;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -129,7 +135,7 @@ input, textarea {
   resize: vertical;
 }
 
-button {
+.formulario__botao {
   background: #3b82f6;
   color: #fff;
   border: none;
@@ -139,8 +145,8 @@ button {
   cursor: pointer;
 }
 
-/* Footer */
-footer {
+/* ========== Footer ========== */
+.footer {
   background-color: #1e1e2f;
   color: #fff;
   text-align: center;
@@ -148,7 +154,7 @@ footer {
   margin-top: 2rem;
 }
 
-/* Scroll reveal animado */
+/* ========== Animações ========== */
 .fade-in {
   opacity: 0;
   transform: translateY(40px);
@@ -159,16 +165,16 @@ footer {
   transform: translateY(0);
 }
 
-/* Responsividade */
+/* ========== Responsividade ========== */
 @media (max-width: 768px) {
-  header {
+  .header {
     flex-direction: column;
     align-items: flex-start;
   }
   .menu {
     flex-direction: column;
   }
-  .banner h2 {
+  .banner__titulo {
     font-size: 1.5rem;
   }
 }
