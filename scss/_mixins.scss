@@ -1,0 +1,22 @@
+@use 'variaveis';
+
+@mixin botao-padrao($bg-color: null, $text-color: #000) {
+ 
+  $bg-color: if($bg-color == null, variaveis.$cor-destaque, $bg-color);
+  margin-top: 4rem;
+  background: $bg-color;
+  color: $text-color;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+@mixin secao {
+  padding: variaveis.$espacamento;
+}

@@ -1,0 +1,15 @@
+@use 'variaveis';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: variaveis.$fonte-principal;
+  line-height: 1.6;
+  background: variaveis.$cor-clara;
+  color: variaveis.$cor-texto;
+}

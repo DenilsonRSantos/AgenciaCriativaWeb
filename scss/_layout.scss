@@ -1,0 +1,22 @@
+@use 'variaveis';
+.header {
+  background-color: variaveis.$cor-escura;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8rem;
+}
+
+.footer {
+  background-color:variaveis.$cor-escura;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
