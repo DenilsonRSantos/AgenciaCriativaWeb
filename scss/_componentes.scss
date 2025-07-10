@@ -1,0 +1,116 @@
+@use 'variaveis';
+@use 'mixins';
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.banner {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, variaveis.$cor-secundaria, variaveis.$cor-primaria);
+  color: white;
+  position: relative;
+
+  &__imagem {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+
+  &__titulo {
+    font-size: 2rem;
+  }
+
+  &__destaque {
+    font-weight: bold;
+    color: variaveis.$cor-destaque;
+  }
+}
+
+.botao--cta {
+  @include mixins.botao-padrao();
+  margin-top: 2rem; 
+  display: inline-block;
+}
+
+
+.secao {
+  @include mixins.secao;
+
+  &__titulo {
+    font-size: 2rem;
+    margin-bottom: calc(variaveis.$espacamento / 2);
+  }
+}
+
+.servicos__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  list-style: none;
+}
+
+.servicos__item {
+  background-color: white;
+  padding: variaveis.$padding-padrao;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.depoimento {
+  font-style: italic;
+  border-left: 4px solid variaveis.$cor-primaria;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin-top: 1rem;
+
+  &__input,
+  &__textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    resize: vertical;
+  }
+
+  &__botao {
+    background: variaveis.$cor-primaria;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
