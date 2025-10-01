@@ -17,21 +17,36 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      # Usa cache SÓ se houver lock (evita o erro/annotation)
+      - name: Setup Node (com cache se houver lock)
+        if: ${{ hashFiles('**/package-lock.json') != '' }}
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
+      # Sem cache quando não há lock
+      - name: Setup Node (sem cache)
+        if: ${{ hashFiles('**/package-lock.json') == '' }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Instalação: usa ci se houver lock, senão install
       - name: Install deps
-        run: npm install
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
 
       - name: Lint
         run: npm run lint
 
-      # roda testes só se existir script "test"
       - name: Test
         run: npm run test --if-present
 
       - name: Build
         run: npm run build
+
